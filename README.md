@@ -1,35 +1,54 @@
-# @pipeworx/mcp-citybikes
+# mcp-citybikes
 
-MCP server for [CityBik.es](https://citybik.es) — list bike-sharing networks worldwide, get live station availability, and search by city or country. Free, no auth required.
+Citybikes MCP — wraps CityBik.es API (free, no auth required)
+
+Part of [Pipeworx](https://pipeworx.io) — an MCP gateway connecting AI agents to 250+ live data sources.
 
 ## Tools
 
 | Tool | Description |
 |------|-------------|
-| `list_networks` | List all bike-sharing networks worldwide |
-| `get_network` | Get live station data for a specific network |
-| `search_networks` | Search networks by city or country name |
 
 ## Quick Start
 
-Add to your MCP client config:
+Add to your MCP client (Claude Desktop, Cursor, Windsurf, etc.):
 
 ```json
 {
   "mcpServers": {
     "citybikes": {
-      "type": "url",
-      "url": "https://gateway.pipeworx.io/citybikes"
+      "url": "https://gateway.pipeworx.io/citybikes/mcp"
     }
   }
 }
 ```
 
-## CLI Usage
+Or connect to the full Pipeworx gateway for access to all 250+ data sources:
 
-```bash
-npx @anthropic-ai/mcp-client https://gateway.pipeworx.io/citybikes
+```json
+{
+  "mcpServers": {
+    "pipeworx": {
+      "url": "https://gateway.pipeworx.io/mcp"
+    }
+  }
+}
 ```
+
+## Using with ask_pipeworx
+
+Instead of calling tools directly, you can ask questions in plain English:
+
+```
+ask_pipeworx({ question: "your question about Citybikes data" })
+```
+
+The gateway picks the right tool and fills the arguments automatically.
+
+## More
+
+- [All tools and guides](https://github.com/pipeworx-io/examples)
+- [pipeworx.io](https://pipeworx.io)
 
 ## License
 
