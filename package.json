@@ -1,20 +1,32 @@
 {
   "name": "@pipeworx/mcp-citybikes",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Citybikes MCP — wraps CityBik.es API (free, no auth required)",
   "type": "module",
   "main": "src/index.ts",
   "types": "src/index.ts",
+  "bin": {
+    "mcp-citybikes": "bin/cli.js"
+  },
   "keywords": ["mcp", "mcp-server", "model-context-protocol", "pipeworx", "citybikes"],
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/pipeworx-io/mcp-citybikes"
+    "url": "git+https://github.com/pipeworx-io/mcp-citybikes.git"
   },
   "scripts": {
     "typecheck": "tsc --noEmit"
   },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.30.0",
+    "tsx": "^4.19.0"
+  },
   "devDependencies": {
-    "typescript": "^5.7.0"
+    "typescript": "^5.9.3",
+    "@cloudflare/workers-types": "^4.20260405.1"
+  },
+  "pipeworx": {
+    "sourceHash": "v1-01676f5295f03191a6dddf9f48a40ef462e05b36929627322b854e189574160a",
+    "sourceCommit": "60f04b68c347e970c6be94a53439d1364061fc06"
   }
 }
