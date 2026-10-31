@@ -1,6 +1,6 @@
 {
   "name": "@pipeworx/mcp-citybikes",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Citybikes MCP — wraps CityBik.es API (free, no auth required)",
   "type": "module",
   "main": "lib/index.js",
@@ -27,7 +27,7 @@
     "mode": "gateway",
     "slug": "citybikes",
     "gatewaySlug": "citybikes",
-    "sourceHash": "v1-475c8775d82840425faa1863457fcf40d35537bc033c096ae0a106048ad1bb96",
-    "sourceCommit": "4277282d72f9bf55e548b3799aaf737baf22152f"
+    "sourceHash": "v1-e9045396816b150ff2b6c59d90bf757ec57fba5dd709167e4241894e3a7dc342",
+    "sourceCommit": "547a3983b42dacf4389ca474860b0a1dee8e6053"
   }
 }
